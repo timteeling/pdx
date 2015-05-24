@@ -170,16 +170,6 @@ dfn {
 }
 
 /**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/**
  * Address styling not present in IE 8/9.
  */
 
@@ -227,6 +217,7 @@ img {
   border: 0;
   max-width: 100%;
   height: auto !important;
+  vertical-align: middle;
 }
 
 figure {
@@ -484,7 +475,6 @@ html {
 body {
   font: 112.5%/1.5 lato, karla, sans-serif;
   color: #666;
-  background: #f5f5f5;
   -webkit-font-variant-ligatures: common-ligatures;
   font-variant-ligatures: common-ligatures;
   -webkit-font-feature-settings: "kern";
@@ -495,8 +485,32 @@ body {
 
 h1 {
   color: #222;
-  line-height: 1.1;
   font-family: karla;
+}
+
+.padded-multiline {
+	line-height: 1.3;
+}
+
+@media (min-width: 38em) {
+	.padded-multiline { 
+	  line-height: 1.3; 
+	  padding: 2px 0; 
+	  border-left: 20px solid #ffb612;
+	  width: 400px;
+	  margin: 20px auto;
+	}
+	.padded-multiline h1 { 
+	  background-color: #ffb612;
+	  padding: 4px 0;
+	  color: #222;
+	  display: inline;
+	  margin: 0; 
+	}
+	.padded-multiline h1 span { 
+	  position: relative;
+	  left: -10px; 
+	}
 }
 
 h2,
@@ -518,7 +532,6 @@ main a {
   text-decoration: none;
   border-bottom: 2px solid #4b92db;
   background: hsla(210, 87%, 88%, .75);
-  padding: 0 .25em;
   transition: .2s all ease-in;
 }
 
@@ -534,25 +547,38 @@ main a:hover {
 }
 
 .header {
-  padding: 1em 0;
-  margin-bottom: 2em;
-  border-bottom: 3px solid #ffb612;
-  background: #fff;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+@media (min-width: 38em) {
+	.header {
+		padding: 1em 0;
+	}
 }
 
 .logo {
-  color: #555;
+  color: #222;
+  background: #ffb612;
   text-decoration: none;
   font-style: normal;
   font-family: karla, sans-serif;
+  padding-left: 1em;
 }
 
 .logo span {
   font-style: italic;
-  color: #222;
   font-weight: bold;
-  font-size: 2em;
-  color: #4b92db;
+  font-size: 2.75em;
+}
+
+@media (min-width: 45em) {
+	.logo {
+		font-size: 1.25em;
+	}
 }
 
 .container {
@@ -561,9 +587,52 @@ main a:hover {
   margin: 0 auto;
 }
 
+.entry-header {
+	position: relative;
+}
+
+.title-area {
+	padding: .5em 0;
+	margin-top: 1em;
+	text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+@media (min-width: 38em) {
+	.title-area {
+		position: absolute;
+		width: 100%;
+		bottom: 3em;
+		background: transparent;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+	}
+	
+	h1 {
+		font-size: 2.5em;
+	}
+}
+
+@media (min-width: 65em) {
+	.title-area {
+		bottom: 6em;
+	}
+	
+	h1 {
+		font-size: 2.75em;
+	}
+}
+
 .stats {
   margin: 2em 0;
 	text-align: center;
+	display: table;
+	width: 100%;
 }
 
 .stat {
@@ -592,6 +661,10 @@ main a:hover {
   font-family: karla, sans-serif;
 }
 
+.textcenter {
+	text-align: center;
+}
+
 blockquote {
 	font-style: italic;
 	border-left: 3px solid #4b92db;
@@ -599,131 +672,47 @@ blockquote {
 }
 
 .entry-meta {
-	font-style: italic;
 	font-family: karla, sans-serif;
 	font-size: .875em;
+	text-align: center;
+	margin-top: 2em;
 }
 
 .site-footer {
 	text-align: center;
-	padding: 2em;
-	margin-top: 2em;
-	border-top: 1px solid rgba(0,0,0,.1);
+	padding: 4em;
 }
 
-
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul ul li {
-
-}
-
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
-}
-
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a {
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
+@media (min-width: 64em) {
+	.home .site-content {
+		overflow: hidden;
 	}
-	.main-navigation ul {
-		display: block;
+	
+	.home article {
+		width: 50%;
+		font-size: .75em;
+		float: left;
+		padding: 0 1em;
 	}
+	
+	.home article .title-area {
+		bottom: 3em;
+	}
+	
+	.home article:first-child {
+		width: 100%;
+		font-size: 1em;
+		float: none;
+		padding: 0;
+		margin-bottom: 1em;
+	}
+	
+	.home article:first-child .title-area {
+		bottom: 6em;
+	}
+
 }
 
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -834,10 +823,6 @@ blockquote {
 	display: block;
 }
 
-.hentry {
-	margin: 0 0 1.5em;
-}
-
 .page-content,
 .entry-content,
 .entry-summary {
@@ -855,20 +840,6 @@ blockquote {
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
 	display: none;
-}
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-	display: block;
 }
 
 /*--------------------------------------------------------------

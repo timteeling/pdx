@@ -42,6 +42,7 @@ function pdx_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 1920, 1080, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
