@@ -10,7 +10,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer container" role="contentinfo">
+	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			&copy;2015 Boot Scootin' 2 PDX
 		</div><!-- .site-info -->

@@ -489,7 +489,7 @@ h1 {
 }
 
 .padded-multiline {
-	line-height: 1.3;
+	line-height: 1.1;
 }
 
 @media (min-width: 38em) {
@@ -547,16 +547,16 @@ main a:hover {
 }
 
 .header {
-  padding: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 100;
+  padding: .25em 0;
 }
 
 @media (min-width: 38em) {
 	.header {
 		padding: 1em 0;
+		position: absolute;
+	  top: 0;
+	  width: 100%;
+	  z-index: 100;
 	}
 }
 
@@ -629,7 +629,7 @@ h1 {
 }
 
 .stats {
-  margin: 2em 0;
+  margin: 1em 0 2em;
 	text-align: center;
 	display: table;
 	width: 100%;
