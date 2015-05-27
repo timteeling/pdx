@@ -17,10 +17,6 @@
 	<iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=<?php echo $location; ?>&zoom=9&key=AIzaSyC5IPlMdb9AFfpRtOSC7OFwAEkBku4B8SU"></iframe>
 	
 <div class="container">
-
-	<!--<a class="block" href="https://maps.google.com/maps?q=<?php echo $location; ?>">
-		<img src="http://maps.google.com/maps/api/staticmap?center=<?php echo $location; ?>&zoom=10&markers=<?php echo $location; ?>&size=640x360&sensor=false&visual_refresh=true&scale=2" />
-	</a>-->
 	<div class="row">
 		<div class="onehalf">
 			<h1>Track Our Location</h1>
@@ -28,7 +24,7 @@
 		<div class="onehalf last">
 			<h3>Last check in</h3>
 			<p><?php echo $location; ?></p>
-			<h3>Last Updated</h3>
+			<h3>Last updated</h3>
 			<p><?php echo $time; ?></p>
 		</div>
 	</div>
