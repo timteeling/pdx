@@ -22,10 +22,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pdx' ); ?></a>
 
 	<header class="header" role="banner">
-
-			<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Boot Scootin’ 2 <span>PDX</span></a>
-
-
+		<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Boot Scootin’ 2 <span>PDX</span></a>
 	</header>
 
 	<div id="content" class="site-content">

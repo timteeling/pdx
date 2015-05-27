@@ -558,6 +558,26 @@ main a:hover {
 	  width: 100%;
 	  z-index: 100;
 	}
+	
+	.location-page .header {
+		position: inherit;
+		padding: 0 0 .5em;
+	}
+	
+	.onehalf {
+		float: left;
+		width: 47.5%;
+		margin-right: 5%;
+	}
+	
+	.onehalf.last {
+		margin-right: 0;
+	}
+}
+
+.row {
+	padding: 2em 0;
+	overflow: hidden;
 }
 
 .logo {
@@ -602,6 +622,15 @@ h1 {
   margin: 0;
 }
 
+.location-page h1 {
+	line-height: 1;
+	margin-top: .5em;
+}
+
+.mt {
+	margin-top: 1em;
+}
+
 @media (min-width: 38em) {
 	.title-area {
 		position: absolute;
@@ -625,6 +654,12 @@ h1 {
 	
 	h1 {
 		font-size: 2.75em;
+	}
+}
+
+@media (min-width: 92em) {
+	.title-area {
+		bottom: 12em;
 	}
 }
 
@@ -711,6 +746,12 @@ blockquote {
 		bottom: 6em;
 	}
 
+}
+
+@media (min-width: 92em) {
+	.home article:first-child .title-area {
+		bottom: 12em;
+	}
 }
 
 
