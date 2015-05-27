@@ -116,7 +116,8 @@ audio:not([controls]) {
  */
 
 [hidden],
-template {
+template,
+.hide {
   display: none;
 }
 
@@ -599,6 +600,40 @@ main a:hover {
 	.logo {
 		font-size: 1.25em;
 	}
+}
+
+.find-us {
+	position: absolute;
+	right: 1em;
+	top: 1.25em;
+	text-decoration: none;
+	color: #fff;
+	text-shadow: 0 0 .5em rgba(0,0,0,.5);
+}
+
+.find-us span {
+	display: none;
+}
+
+@media (min-width: 38em) {
+	.find-us {
+		top: 2em;
+	}
+	
+	.find-us span {
+		display: inline;
+	}
+}
+
+
+.icon {
+	width: 2em;
+	height: 2em;
+	fill: #222;
+	background: #ffb612;
+	padding: .375em;
+	vertical-align: middle;
+	border-radius: 50%;
 }
 
 .container {
