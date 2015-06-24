@@ -753,6 +753,10 @@ blockquote {
 	padding: 4em;
 }
 
+.home article {
+	padding-bottom: 1em;
+}
+
 @media (min-width: 64em) {
 	.home .site-content {
 		overflow: hidden;
@@ -762,7 +766,7 @@ blockquote {
 		width: 50%;
 		font-size: .75em;
 		float: left;
-		padding: 0 1em;
+		padding: 0 1em 2em;
 	}
 	
 	.home article .title-area {
@@ -950,7 +954,7 @@ object {
 }
 
 .wp-caption-text {
-	text-align: left;
+	text-align: center;
 	font-size: .75em;
 	font-family: karla, sans-serif;
 	margin-top: .25em;
